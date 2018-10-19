@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { isLoggedIn } from 'Auth/lib/loginStatus';
@@ -7,7 +7,10 @@ import Private from './Private';
 
 const Routes = ({ loggedIn }) => (
   <BrowserRouter>
-    {loggedIn ? <Private /> : <Public />}
+    <Fragment>
+      <Public />
+      {loggedIn && <Private />}
+    </Fragment>
   </BrowserRouter>
 );
 

@@ -3,11 +3,7 @@ import { connect } from 'react-redux';
 import Ui from './ui';
 import { isLoading } from 'Page/store/reducers';
 
-const Loading = ({ children, isLoading }) => isLoading ? (
-  <Ui />
- ) : (
-   children
- );
+const Loading = ({ children, isLoading }) => isLoading ? <Ui /> : children;
 
 const mapStateToProps = state => ({
   isLoading: isLoading(state),
