@@ -6,6 +6,14 @@ The purpose of this is to provide a proof-of-concept for some ideas around the i
 
 This app is far from fully-fledged. Any components and app flows have been built solely for the purpose of demonstrating an idea, or to highlight an intention of how something could be fully built, and may be hacky and not fully work.
 
+## Usage
+
+* You do not need to enter a partnerid and password to login. just hit the login button to proceed
+* Once logged in you can logout by clearing the localStorage item and returning to the root `/` path
+```javascript
+localStorage.removeItem('token');
+```
+
 ## Concepts
 
 ### Everything as a component
